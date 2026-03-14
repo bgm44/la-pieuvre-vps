@@ -1,0 +1,3 @@
+[submodule "pieuvre-cockpit"]
+	path = pieuvre-cockpit
+	url = git@github.com:AlexandreChollet/pieuvre-cockpit.git

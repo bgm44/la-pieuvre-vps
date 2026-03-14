@@ -1,0 +1,59 @@
+# ─── Secrets ─────────────────────────────────────────
+.env
+.env.local
+*.pem
+*.key
+
+# ─── SSH / credentials ────────────────────────────────
+.ssh/
+.docker/
+
+# ─── Shell / dotfiles ─────────────────────────────────
+.bash_history
+.bash_logout
+.bashrc
+.profile
+.sudo_as_admin_successful
+.tmux.conf
+.gitconfig
+.claude.json
+
+# ─── Caches / runtime ─────────────────────────────────
+.cache/
+.npm/
+.nvm/
+.local/
+
+# ─── Projects (cloned separately) ───────────────────
+Projects/*/
+!Projects/.gitkeep
+
+# ─── Cockpit runtime data ───────────────────────────
+pieuvre-cockpit/workspaces/
+pieuvre-cockpit/logs/
+pieuvre-cockpit/data/
+pieuvre-cockpit/uploads/
+pieuvre-cockpit/front/.next/
+pieuvre-cockpit/front/node_modules/
+
+# ─── Node / build artifacts ─────────────────────────
+node_modules/
+.next/
+.nuxt/
+dist/
+*.log
+
+# ─── VPN configs (contain certs) ────────────────────
+*.ovpn
+*.zip
+vpn-touriz/
+
+# ─── OS / editor ────────────────────────────────────
+.DS_Store
+*.swp
+*.swo
+*~
+
+# ─── Misc ────────────────────────────────────────────
+command_history.txt
+.claude/
