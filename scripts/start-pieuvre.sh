@@ -16,7 +16,7 @@ hist() { echo "[$(ts)] $*" >> "$HISTORY"; }
 log "🐙 Démarrage de La Pieuvre..."
 
 # 1. Infra Docker
-log "→ Lancement infra (PG + Mongo + PgAdmin + Mongo Express + Dozzle)..."
+log "→ Lancement infra (PostgreSQL + MongoDB)..."
 hist "docker compose up -d (start-pieuvre.sh)"
 cd /home/ubuntu/infra && docker compose up -d
 log "→ Infra lancée."
@@ -48,9 +48,8 @@ fi
 
 log "🐙 La Pieuvre est opérationnelle !"
 log "   tmux attach -t pieuvre   → pour rejoindre la session"
-log "   Dozzle   → http://IP:9999"
-log "   PgAdmin  → http://IP:5050  (dev@pieuvre.dev / PieuvreAdmin2024!)"
-log "   Mongo    → http://IP:8081"
+log "   PostgreSQL → port 5432"
+log "   MongoDB    → port 27017"
 
 # VPN Touriz — route spécifique pour le serveur OVH (DB migration)
 if ip link show tun0 > /dev/null 2>&1; then

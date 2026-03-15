@@ -24,12 +24,6 @@ if ! docker ps --format '{{.Names}}' | grep -q pieuvre-mongo; then
   cd /home/ubuntu/infra && docker compose up -d mongo
 fi
 
-# Dozzle
-if ! docker ps --format '{{.Names}}' | grep -q pieuvre-dozzle; then
-  echo "[$(ts)] [WARN] Dozzle down — relancement..." >> "$LOG"
-  echo "[$(ts)] docker compose up -d dozzle (watchdog)" >> "$HISTORY"
-  cd /home/ubuntu/infra && docker compose up -d dozzle
-fi
 
 # Session tmux pieuvre
 if ! tmux has-session -t pieuvre 2>/dev/null; then
